@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/rwcolor"
+    tools:context=".MemberDetailActivity">
+
+    <!-- Image with rounded corners -->
+    <ImageView
+        android:id="@+id/imageViewDetail"
+        android:layout_width="0dp"
+        android:layout_height="200dp"
+        android:layout_margin="16dp"
+        android:scaleType="centerCrop"
+    app:layout_constraintTop_toTopOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"/>
+
+    <!-- Stylized text views -->
+    <TextView
+        android:id="@+id/textViewNameDetail"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:textSize="24sp"
+    android:textColor="@color/primaryTextColor"
+    app:layout_constraintTop_toBottomOf="@id/imageViewDetail"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    android:text="Member Name" />
+
+    <TextView
+        android:id="@+id/textViewDescriptionDetail"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:textSize="18sp"
+    android:textColor="@color/secondaryTextColor"
+    app:layout_constraintTop_toBottomOf="@id/textViewNameDetail"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    android:text="Short Description" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
