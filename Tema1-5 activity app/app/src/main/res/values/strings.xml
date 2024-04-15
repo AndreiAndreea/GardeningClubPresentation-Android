@@ -2,4 +2,6 @@
     <string name="app_name">Homework1PAM</string>
     <string name="title_activity_member_detail">MemberDetailActivity</string>
     <string name="add_member">Add Member</string>
+    <string name="delete_member">Delete member</string>
+    <string name="title">Gardening club members</string>
 </resources>

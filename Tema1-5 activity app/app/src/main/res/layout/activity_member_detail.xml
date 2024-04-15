@@ -26,6 +26,7 @@
         android:layout_height="wrap_content"
         android:layout_margin="16dp"
         android:textSize="24sp"
+        android:textAlignment="center"
     android:textColor="@color/primaryTextColor"
     app:layout_constraintTop_toBottomOf="@id/imageViewDetail"
     app:layout_constraintStart_toStartOf="parent"
@@ -38,6 +39,7 @@
         android:layout_height="wrap_content"
         android:layout_margin="16dp"
         android:textSize="18sp"
+        android:textAlignment="center"
     android:textColor="@color/secondaryTextColor"
     app:layout_constraintTop_toBottomOf="@id/textViewNameDetail"
     app:layout_constraintStart_toStartOf="parent"
@@ -54,6 +56,17 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/textViewDescriptionDetail"
         android:layout_marginTop="16dp"/>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fab_delete_member"
+        android:tooltipText="Delete Member"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:contentDescription="@string/delete_member"
+        android:src="@drawable/ic_delete"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
