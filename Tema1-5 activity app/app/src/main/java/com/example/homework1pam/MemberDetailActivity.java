@@ -1,6 +1,9 @@
 package com.example.homework1pam;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -26,11 +29,21 @@ public class MemberDetailActivity extends AppCompatActivity {
 
         if (member != null) {
             // Use Picasso or Glide to load the image from a URL
-            // Picasso.get().load(member.getImageUrl()).into(imageViewDetail);
+            //Picasso.get().load(member.getImageUrl()).into(imageViewDetail);
             textViewNameDetail.setText(member.getName());
             textViewDescriptionDetail.setText(member.getShortDescription());
         } else {
             // Handle the case where there is no member object
         }
+
+        Button buttonMoreDetails = findViewById(R.id.buttonMoreDetails);
+        buttonMoreDetails.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent fullDetailIntent = new Intent(MemberDetailActivity.this, MemberFullDetailActivity.class);
+                fullDetailIntent.putExtra("member", member); // Pass the member object
+                startActivity(fullDetailIntent);
+            }
+        });
     }
 }
